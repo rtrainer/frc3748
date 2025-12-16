@@ -152,9 +152,20 @@ footer a:hover {
     color: white;
 }
 
+/*
 .social-icons a:hover {
     background-color: var(--primary-red);
     transform: translateY(-3px);
+}
+*/
+
+.social-icons a:hover {
+    color: #FFD700;
+    /* Gold */
+    transform: translateY(-5px);
+    /* Moves up slightly */
+    text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.7);
+    /* Adds a glow */
 }
 
 /* Force the dropdown to be pitch black */
