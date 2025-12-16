@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Team 3748 Ragnarok Robotics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-red: #C62828;
+            --dark-grey: #212121;
+            --ragnarok-gold: #eaad1f;
+            /* The requested color */
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* Branding - HEADINGS UPDATED TO GOLD */
+        h1,
+        h2,
+        h3,
+        h4,
+        .navbar-brand,
+        .page-header {
+            font-family: 'Cinzel Decorative', cursive;
+            color: var(--ragnarok-gold);
+            /* Updated color */
+            font-weight: 700;
+        }
+
+        /* Navbar */
+        .navbar-brand img {
+            height: 50px;
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .navbar-brand span {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            color: var(--ragnarok-gold);
+            /* Ensure brand text is gold */
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            font-family: 'Cinzel Decorative', cursive;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: var(--ragnarok-gold);
+        }
+
+        .navbar-dark .navbar-nav .nav-link.active {
+            color: var(--ragnarok-gold) !important;
+            font-weight: 900;
+            text-shadow: 0px 0px 10px rgba(234, 173, 31, 0.3);
+        }
+
+        /* Page Header */
+        .page-header-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://placehold.co/1920x600/333/FFF?text=Team+History');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .page-header-section h1 {
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+            color: var(--ragnarok-gold);
+        }
+
+        /* Content Sections */
+        .content-box {
+            background: white;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid var(--primary-red);
+            /* Kept accent red for contrast */
+            height: 100%;
+        }
+
+        /* Stat Cards */
+        .stat-card {
+            background-color: var(--dark-grey);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(234, 173, 31, 0.2);
+        }
+
+        .stat-card i {
+            font-size: 3rem;
+            color: var(--ragnarok-gold);
+            margin-bottom: 15px;
+        }
+
+        .stat-card h3 {
+            color: var(--ragnarok-gold);
+            /* Headers in cards are gold */
+            font-family: 'Cinzel Decorative', cursive;
+        }
+
+        /* Timeline / Saga Styles */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            border-left: 3px solid var(--ragnarok-gold);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 20px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -39px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            background-color: var(--primary-red);
+            border: 3px solid var(--dark-grey);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-year {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 1.5rem;
+            color: var(--dark-grey);
+            font-weight: 900;
+        }
+
+        .timeline-content h4 {
+            color: var(--ragnarok-gold);
+            /* Timeline headers are gold */
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .timeline-content p {
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-grey);
+            color: white;
+            padding-top: 50px;
+            padding-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Footer Headers */
+        footer h5 {
+            color: var(--ragnarok-gold);
+        }
+
+        .footer-logo {
+            max-height: 80px;
+            width: auto;
+            margin: 0;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--ragnarok-gold);
+            border-radius: 50%;
+            margin-left: 10px;
+            font-size: 1.2rem;
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--primary-red);
+        }
+
+        /* Buttons */
+        .btn-norse {
+            font-family: 'Cinzel Decorative', cursive;
+            background-color: var(--primary-red);
+            /* Kept buttons red for call-to-action visibility */
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+
+        .btn-norse:hover {
+            background-color: #b71c1c;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo.png" alt="Ragnarok Robotics Logo" onerror="this.style.display='none'">
+                <span>Team 3748</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">FIRST</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Sponsor
+                            Us!</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Sponsors</a></li>
+                            <li><a class="dropdown-item" href="#">Sponsorship Materials</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="#" class="btn btn-norse">DONATE</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header-section">
+        <div class="container">
+            <h1>ABOUT THE TEAM</h1>
+            <p class="lead" style="font-family: 'Cinzel Decorative', cursive; letter-spacing: 2px;">Building Robots.
+                Building Leaders.</p>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="content-box">
+                        <h2 class="mb-4">WHO WE ARE</h2>
+                        <p class="lead text-dark">We are Team 3748 Ragnarok Robotics, a student-led robotics team from
+                            <strong>Mt. Hebron High School</strong> based in Ellicott City, MD.
+                        </p>
+                        <p>Founded with a passion for STEM, our team competes in the FIRST Robotics Competition (FRC).
+                            Every year, we are challenged to build an industrial-size robot to play a difficult field
+                            game in alliance with other teams, while also fundraising to meet our goals, designing a
+                            team brand, and advancing respect and appreciation for STEM within the local community.</p>
+
+                        <h2 class="mt-5 mb-4">OUR MISSION</h2>
+                        <p>We foster encouraging environments for students to apply engineering concepts to real-world
+                            challenges. We believe in:</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-hammer text-danger me-2"></i> <strong>Hands-on
+                                    Learning:</strong> From machining to coding.</li>
+                            <li class="mb-2"><i class="fas fa-users text-danger me-2"></i>
+                                <strong>Collaboration:</strong> Working together to solve complex problems.
+                            </li>
+                            <li class="mb-2"><i class="fas fa-lightbulb text-danger me-2"></i>
+                                <strong>Innovation:</strong> Pushing the boundaries of what high school students can
+                                achieve.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <img src="https://placehold.co/600x800/222/FFF?text=Team+at+Competition"
+                        class="img-fluid rounded shadow mb-4 w-100" style="object-fit: cover; height: 400px;">
+
+                    <div class="card bg-dark text-white p-4 rounded shadow">
+                        <h3 class="mb-3">TEAM INFO</h3>
+                        <p><strong><i class="fas fa-hashtag text-warning me-2"></i> Number:</strong> 3748</p>
+                        <p><strong><i class="fas fa-school text-warning me-2"></i> School:</strong> Mt. Hebron High
+                            School</p>
+                        <p><strong><i class="fas fa-map-marker-alt text-warning me-2"></i> Location:</strong> 9440 Old
+                            Frederick Rd, Ellicott City, MD</p>
+                        <p><strong><i class="fas fa-calendar-alt text-warning me-2"></i> Founded:</strong> 2011</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Student Led</h3>
+                        <p class="text-white-50 mb-0">Driven by passion and curiosity.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <i class="fas fa-robot"></i>
+                        <h3>FRC Competitor</h3>
+                        <p class="text-white-50 mb-0">Competing at the highest level.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h3>Community</h3>
+                        <p class="text-white-50 mb-0">Outreach and education focus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">OUR SAGA</h2>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="timeline-year">2025</span>
+                            <div class="timeline-content">
+                                <h4>Conquering the Chesapeake</h4>
+                                <p>A historic season culminating in a qualification for the <strong>World
+                                        Championship</strong> in Houston, TX (Milstein Division).</p>
+                                <hr class="my-2 opacity-25" style="border-color: var(--ragnarok-gold);">
+                                <ul class="list-unstyled mb-0">
+                                    <li><small><i class="fas fa-trophy text-warning"></i> <strong>District
+                                                Championship:</strong> Alliance 4 Captain & Rank 5</small></li>
+                                    <li><small><i class="fas fa-medal text-warning"></i> <strong>Alexandria
+                                                Event:</strong>
+                                            Alliance 3 Captain & Rank 3</small></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <span class="timeline-year">2012 - 2024</span>
+                            <div class="timeline-content">
+                                <h4>Forging the Legacy</h4>
+                                <p>Over a decade of continuous improvement, building complex machines and fostering a
+                                    culture of STEM excellence at Mt. Hebron High School.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <span class="timeline-year">2011</span>
+                            <div class="timeline-content">
+                                <h4>The Origin</h4>
+                                <p>Team 3748 Ragnarok Robotics was founded. The journey began with a small group of
+                                    dedicated students and a vision to engineer the future.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <div class="d-flex align-items-center">
+                        <div class="me-3">
+                            <img src="school-logo.png" alt="Mt. Hebron High School Logo" class="footer-logo"
+                                onerror="this.style.display='none'">
+                        </div>
+                        <div>
+                            <h5 class="text-uppercase fw-bold mb-1">Mt. Hebron High School</h5>
+                            <p class="text-white-50 mb-0">
+                                9440 Old Frederick Rd,<br>
+                                Ellicott City, MD 21042
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 text-md-end">
+                    <h5 class="text-uppercase fw-bold">Contact Us</h5>
+                    <p class="mb-3">
+                        <a href="mailto:mthragnarok@gmail.com" class="text-white fs-5">mthragnarok@gmail.com</a>
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-top border-secondary pt-4 text-center">
+                <small class="text-white">Copyright © 2025 Team 3748 Ragnarok Robotics</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

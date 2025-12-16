@@ -1,0 +1,172 @@
+:root {
+    --primary-red: #C62828;
+    --dark-grey: #212121;
+    --ragnarok-gold: #eaad1f;
+    /* Primary Title Color */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Branding - HEADINGS UPDATED TO GOLD */
+h1,
+h2,
+h3,
+h4,
+.navbar-brand {
+    font-family: 'Viking-Normal', sans-serif;
+    /*font-family: 'Cinzel Decorative', cursive;*/
+    color: var(--ragnarok-gold);
+    font-weight: 700;
+}
+
+/* Navbar Customization */
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.navbar-brand span {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: var(--ragnarok-gold);
+    /* Brand text is gold */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    font-family: 'Viking-Normal', sans-serif;
+    /*font-family: 'Cinzel Decorative', cursive;*/
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--ragnarok-gold);
+}
+
+/* Active Page State (Gold) */
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--ragnarok-gold) !important;
+    font-weight: 900;
+    text-shadow: 0px 0px 10px rgba(234, 173, 31, 0.3);
+}
+
+/* Main Hero Section */
+.main-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+.main-hero h1 {
+    color: var(--ragnarok-gold);
+    /* Main Title Gold */
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+    letter-spacing: 5px;
+}
+
+/* Buttons with Norse Font (Kept Red for Contrast) */
+.btn-norse {
+    font-family: 'Viking-Normal', sans-serif;
+    /*font-family: 'Cinzel Decorative', cursive;*/
+    background-color: var(--primary-red);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    letter-spacing: 1px;
+}
+
+.btn-norse:hover {
+    background-color: #b71c1c;
+    color: white;
+}
+
+/* Carousel Customization */
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 2px;
+    padding: 20px;
+    border-left: 4px solid var(--primary-red);
+}
+
+.carousel-caption h5 {
+    color: var(--ragnarok-gold);
+    font-family: 'Viking-Normal', sans-serif;
+    /*font-family: 'Cinzel Decorative', cursive;*/
+    font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-grey);
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+footer h5 {
+    color: var(--ragnarok-gold);
+    letter-spacing: 1px;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary-red);
+}
+
+/* School Logo in Footer */
+.footer-logo {
+    max-height: 80px;
+    width: auto;
+    margin: 0;
+}
+
+/* Social Icons Styling */
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--ragnarok-gold);
+    border-radius: 50%;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-red);
+    transform: translateY(-3px);
+}
+
+/* Force the dropdown to be pitch black */
+.dropdown-menu-dark {
+    background-color: #000000 !important;
+    border: 1px solid #333;
+    /* Dark gray border so it pops */
+}
+
+/* Optional: Change hover color to your team color (e.g., Blue) */
+.dropdown-item:hover {
+    background-color: #0d6efd !important;
+    /* Bootstrap Blue */
+    color: #fff !important;
+}
