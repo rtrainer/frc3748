@@ -304,3 +304,18 @@ footer a:hover {
     object-fit: contain;
     /* Keeps logos from stretching weirdly */
 }
+
+.award-year {
+    color: #0d6efd;
+    /* Bootstrap Primary Blue */
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.award-item {
+    border-left: 3px solid #333;
+    /* Timeline look */
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
