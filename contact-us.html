@@ -78,59 +78,61 @@
     </header>
 
     <div class="container my-5">
-        <div class="row g-5">
+        <div class="row g-4 align-items-stretch">
             <div class="col-md-5">
-                <div class="p-4" style="background-color: #222; border-radius: 10px; border-left: 4px solid #eaad1f;">
-                    <h3 class="viking-font mb-4">Get in Touch</h3>
+                <div class="p-4 h-100 d-flex flex-column" style="background-color: #222; border-radius: 10px; border-left: 4px solid #eaad1f;">
+                    <h3 class="viking-font mb-3">Get in Touch</h3>
 
-                    <div class="mb-4">
-                        <h5 style="color: #eaad1f;">Location</h5>
-                        <p class="text-white text-decoration-none">Mt. Hebron High School<br>
+                    <div class="mb-3">
+                        <h5 style="color: #eaad1f;" class="mb-1">Location</h5>
+                        <p class="text-white text-decoration-none mb-0">
+                            Mt. Hebron High School<br>
                             9440 Old Frederick Rd<br>
-                            Ellicott City, MD 21042</p>
+                            Ellicott City, MD 21042
+                        </p>
                     </div>
 
-                    <div>
-                        <h5 style="color: #eaad1f;">Socials</h5>
-                        <div class="social-icons" style="margin-left: -15px;"> <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <div class="mt-auto">
+                        <h5 style="color: #eaad1f;" class="mb-2">Socials</h5>
+                        <div class="social-icons" style="margin-left: -15px;">
+                            <a href="https://www.facebook.com/Team3748Ragnarok" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/frc3748/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/c/frcroboticsteam3748" target="_blank"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-7">
-                <form id="emailForm" method="POST">
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label for="name" class="form-label">Your Name</label>
-                            <input type="text" name="name" class="form-control custom-input" id="name" required>
+                <div class="p-4 h-100" style="background-color: #222; border-radius: 10px; border-left: 4px solid #eaad1f;">
+                    <h3 class="viking-font mb-3">Send a Message</h3>
+                    <form id="emailForm" method="POST">
+                        <div class="row g-2 mb-2">
+                            <div class="col-md-6">
+                                <input type="text" name="name" class="form-control form-control-sm custom-input" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" name="email" class="form-control form-control-sm custom-input" id="email" placeholder="Email Address" required>
+                            </div>
                         </div>
 
-                        <div class="col-md-6 mb-3">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" name="email" class="form-control custom-input" id="email" required>
+                        <div class="mb-2">
+                            <select name="subject" class="form-select form-select-sm custom-input" id="subject">
+                                <option value="" disabled selected>Select Subject</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                                <option value="Sponsorship">Sponsorship Opportunity</option>
+                                <option value="Mentorship">Mentorship</option>
+                                <option value="Outreach">Community Outreach</option>
+                            </select>
                         </div>
-                    </div>
 
-                    <div class="mb-3">
-                        <label for="subject" class="form-label">Subject</label>
-                        <select name="subject" class="form-select custom-input" id="subject">
-                            <option value="General Inquiry">General Inquiry</option>
-                            <option value="Sponsorship">Sponsorship Opportunity</option>
-                            <option value="Mentorship">Mentorship</option>
-                            <option value="Outreach">Community Outreach</option>
-                        </select>
-                    </div>
+                        <div class="mb-3">
+                            <textarea name="message" class="form-control form-control-sm custom-input" id="message" rows="3" placeholder="Your Message" required></textarea>
+                        </div>
 
-                    <div class="mb-4">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea name="message" class="form-control custom-input" id="message" rows="5" required></textarea>
-                    </div>
-
-                    <button id="submitBtn" type="submit" class="btn btn-norse btn-lg w-100">SEND MESSAGE</button>
-                </form>
+                        <button id="submitBtn" type="submit" class="btn btn-norse w-100 py-2">SEND MESSAGE</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
