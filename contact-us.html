@@ -56,7 +56,8 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="sponsorDropdown">
                             <li><a class="dropdown-item" href="sponsors.html">Sponsors</a></li>
-                            <li><a class="dropdown-item" href="#">Sponsorship Materials</a></li>
+                            <li><a class="dropdown-item" href="sponsorship-materials.html">Sponsorship Materials</a></li>
+                            <li><a class="dropdown-item" href="Sponsorship-opportunities.html">Sponsorship Opportunitiess</a></li>
                         </ul>
                     </li>
 
@@ -189,7 +190,7 @@
         const submitBtn = document.getElementById('submitBtn');
 
         // Replace this with your actual Google Cloud Function URL
-        const GOOGLE_FUNCTION_URL = "https://us-east4-ragnarok-inquiry-email.cloudfunctions.net/EmailSenderFunction";
+        const GOOGLE_FUNCTION_URL = "https://us-east4-mth-email-processor.cloudfunctions.net/EmailSenderFunction";
 
         form.addEventListener('submit', async function (e) {
             e.preventDefault(); // Stop the form from reloading the page
