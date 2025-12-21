@@ -69,6 +69,22 @@
             margin-bottom: 15px;
             color: var(--primary-red);
         }
+
+        /* YouTube Button Hover overrides */
+        .btn-youtube:hover {
+            background-color: #FF0000;
+            color: white;
+            border-color: #FF0000;
+        }
+
+        .btn-youtube:hover i {
+            color: white !important;
+        }
+
+        /* Custom border for game images */
+        .game-image {
+            border: 2px solid var(--ragnarok-gold);
+        }
     </style>
 </head>
 
@@ -101,13 +117,23 @@
                     </li>
 
                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Seasons
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="2026-game.html">2026 (RebuilT)</a></li>
+                            <li><a class="dropdown-item" href="2025-game.html">2025 (Reefscape)</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="sponsorDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Sponsorship
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="sponsorDropdown">
                             <li><a class="dropdown-item" href="sponsors.html">Sponsors</a></li>
                             <li><a class="dropdown-item" href="sponsorship-materials.html">Sponsorship Materials</a></li>
-                            <li><a class="dropdown-item" href="Sponsorship-opportunities.html">Sponsorship Opportunities</a></li>
+                            <li><a class="dropdown-item" href="Sponsorship-opportunities.html">Sponsorship Opportunitiess</a></li>
                         </ul>
                     </li>
 
@@ -130,25 +156,26 @@
     </header>
 
     <section class="container py-5">
-        <div class="row justify-content-center mb-5">
-            <div class="col-lg-10">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="team-title mb-3" style="color: #212121;">Dive In</h2>
+                <p class="lead text-muted">
+                    In <strong>REEFSCAPE</strong>, two alliances of three teams each compete to restore their "Reef," manage "Algae" populations, and secure their robots on the "Barge."
+                </p>
+                <p class="text-muted">
+                    The game emphasizes precision scoring, vertical integration, and cooperative gameplay mechanics to conserve the coral reef ecosystem.
+                </p>
+            </div>
+
+            <div class="col-lg-6">
                 <div class="video-wrapper">
                     <div class="ratio ratio-16x9">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/YWbxcjlY9JY?si=ovJapyTnqLh3nhOo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/YWbxcjlY9JY" title="2025 FIRST Robotics Competition REEFSCAPE Game Animation" allowfullscreen></iframe>
                     </div>
                 </div>
-                <div class="text-center mt-3">
-                    <p class="text-muted fst-italic">Official FIRST Robotics Competition 2025 Game Animation</p>
+                <div class="text-center mt-2">
+                    <small class="text-muted fst-italic">Official FIRST Robotics Competition 2025 Game Animation</small>
                 </div>
-            </div>
-        </div>
-
-        <div class="row mb-5">
-            <div class="col-lg-8 mx-auto text-center">
-                <h2 class="team-title mb-4" style="color: #212121;">Dive In</h2>
-                <p class="lead text-muted">
-                    In <strong>REEFSCAPE</strong>, two alliances of three teams each compete to restore their "Reef," manage "Algae" populations, and secure their robots on the "Barge." The game emphasizes precision scoring and vertical integration.
-                </p>
             </div>
         </div>
 
@@ -172,63 +199,75 @@
             </div>
         </div>
 
-        <div class="row align-items-center mb-5 p-4 bg-light rounded border">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <h2 class="team-title" style="color: var(--primary-red);">The Reef Levels</h2>
-                <p>The central hub of the alliance's scoring area is the hexagonal Reef. Robots must place Coral onto branches located at various heights and angles. Higher levels yield more points.</p>
+        <div class="row mb-5 p-4 bg-light rounded border align-items-stretch">
+            <div class="col-lg-6 mb-4 mb-lg-0 d-flex flex-column justify-content-between">
 
-                <div class="alert alert-dark border-gold">
-                    <i class="fas fa-info-circle text-warning me-2"></i>
-                    <strong>Ranking Point:</strong> Filling specific rows across these levels earns the Coral Ranking Point.
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="reef-level">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <h4>Level 4 (L4)</h4>
-                        <span class="badge bg-warning text-dark">Highest Difficulty</span>
+                <div class="mb-4">
+                    <h2 class="team-title text-center" style="color: var(--primary-red);">The Reef</h2>
+
+                    <p>The central hub of the alliance's scoring area is the hexagonal Reef. Robots must place Coral onto branches located at various heights and angles. Higher levels yield more points.</p>
+                    <div class="alert alert-dark border-gold py-2">
+                        <i class="fas fa-info-circle text-warning me-2"></i>
+                        <strong>Ranking Point:</strong> Filling specific rows across these levels earns the Coral Ranking Point.
                     </div>
-                    <span>Vertical branches approx. 6ft (1.8m) high.</span>
                 </div>
 
-                <div class="reef-level">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <h4>Level 3 (L3)</h4>
-                        <span class="badge bg-secondary">Medium Difficulty</span>
-                    </div>
-                    <span>Mid-height branches angled upward.</span>
-                </div>
+                <hr class="my-4" style="border-top: 2px solid var(--ragnarok-gold); opacity: 0.5;">
 
-                <div class="reef-level">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <h4>Level 2 (L2)</h4>
-                        <span class="badge bg-secondary">Medium Difficulty</span>
-                    </div>
-                    <span>Low branches angled upward (approx. 35°).</span>
-                </div>
+                <div>
+                    <h2 class="team-title text-center" style="color: var(--primary-red);">Endgame: The Barge</h2>
 
-                <div class="reef-level">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <h4>Level 1 (L1)</h4>
-                        <span class="badge bg-dark">Trough</span>
-                    </div>
-                    <span>The base of the Reef. Easiest to score, lowest point value.</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12">
-                <div class="info-box">
-                    <h3 class="team-title mb-3" style="color: #212121;">Endgame: The Barge</h3>
-                    <p>
-                        In the final 20 seconds, alliances race to the <strong>Barge</strong> to hang their robots.
-                    </p>
-                    <ul>
-                        <li class="mb-2"><strong>Shallow Cage:</strong> Located higher up, easier to reach but worth fewer points.</li>
-                        <li class="mb-2"><strong>Deep Cage:</strong> Hangs lower to the ground. It is harder to climb into but offers significantly more points (12 pts) for a successful hang.</li>
+                    <p>In the final 20 seconds, alliances race to the <strong>Barge</strong> to hang their robots.</p>
+                    <ul class="mb-3">
+                        <li><strong>Shallow Cage:</strong> Higher up, easier reach, fewer points.</li>
+                        <li><strong>Deep Cage:</strong> Hangs lower, harder climb, max points (12 pts).</li>
                     </ul>
-                    <a href="https://www.firstinspires.org/resource-library/frc/competition-manual-qa-system" target="_blank" class="btn btn-norse mt-2">Read Full Game Manual</a>
+
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="https://www.firstinspires.org/resource-library/frc/competition-manual-qa-system" target="_blank" class="btn btn-norse btn-sm">Read Full Game Manual</a>
+
+                        <a href="https://www.youtube.com/@FIRSTRoboticsCompetition/videos" target="_blank" class="btn btn-outline-dark btn-sm btn-youtube d-inline-flex align-items-center">
+                            <i class="fab fa-youtube me-2" style="color: #FF0000; font-size: 1.2rem;"></i>
+                            Watch on YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="sticky-lg-top" style="top: 100px; z-index: 1;">
+                    <h2 class="team-title text-center" style="color: var(--primary-red);">Scoring Hierarchy</h2>
+                    <div class="reef-level">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h4>Level 4 (L4)</h4>
+                            <span class="badge bg-warning text-dark">Highest Difficulty</span>
+                        </div>
+                        <span>Vertical branches approx. 6ft (1.8m) high.</span>
+                    </div>
+
+                    <div class="reef-level">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h4>Level 3 (L3)</h4>
+                            <span class="badge bg-secondary">Medium Difficulty</span>
+                        </div>
+                        <span>Mid-height branches angled upward.</span>
+                    </div>
+
+                    <div class="reef-level">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h4>Level 2 (L2)</h4>
+                            <span class="badge bg-secondary">Medium Difficulty</span>
+                        </div>
+                        <span>Low branches angled upward (approx. 35°).</span>
+                    </div>
+
+                    <div class="reef-level">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h4>Level 1 (L1)</h4>
+                            <span class="badge bg-dark">Trough</span>
+                        </div>
+                        <span>The base of the Reef. Easiest to score, lowest point value.</span>
+                    </div>
                 </div>
             </div>
         </div>
