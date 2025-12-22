@@ -13,7 +13,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025 Game: REEFSCAPE | Team 3748 Ragnarok Robotics</title>
+    <title>2024 Game: CRESCENDO | Team 3748 Ragnarok Robotics</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/styles.css">
@@ -29,8 +29,8 @@
             overflow: hidden;
         }
 
-        /* Reef Level Indicators */
-        .reef-level {
+        /* Scoring Indicators */
+        .score-level {
             background-color: #212121;
             border-left: 5px solid #444;
             padding: 15px;
@@ -38,19 +38,19 @@
             transition: all 0.3s ease;
         }
 
-        .reef-level:hover {
+        .score-level:hover {
             background-color: #2a2a2a;
             border-left-color: var(--ragnarok-gold);
             transform: translateX(5px);
         }
 
-        .reef-level h4 {
+        .score-level h4 {
             color: var(--ragnarok-gold);
             margin-bottom: 0;
             font-size: 1.2rem;
         }
 
-        .reef-level span {
+        .score-level span {
             color: #ccc;
             font-size: 0.9rem;
         }
@@ -79,11 +79,6 @@
 
         .btn-youtube:hover i {
             color: white !important;
-        }
-
-        /* Custom border for game images */
-        .game-image {
-            border: 2px solid var(--ragnarok-gold);
         }
     </style>
 </head>
@@ -122,8 +117,8 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="aboutDropdown">
                             <li><a class="dropdown-item" href="2026-game.html">2026 (RebuilT)</a></li>
-                            <li><a class="dropdown-item active" href="2025-game.html">2025 (Reefscape)</a></li>
-                            <li><a class="dropdown-item" href="2024-game.html">2024 (Crescendo)</a></li>
+                            <li><a class="dropdown-item" href="2025-game.html">2025 (Reefscape)</a></li>
+                            <li><a class="dropdown-item active" href="2024-game.html">2024 (Crescendo)</a></li>
                         </ul>
                     </li>
 
@@ -151,7 +146,7 @@
 
     <header class="main-hero">
         <div class="container">
-            <h1 class="display-3 mb-2">REEFSCAPE</h1>
+            <h1 class="display-3 mb-2">CRESCENDO</h1>
             <p class="text-white-50 mb-2" style="font-family: 'Cinzel Decorative', cursive;">Presented by Haas</p>
         </div>
     </header>
@@ -159,23 +154,23 @@
     <section class="container py-5">
         <div class="row align-items-center mb-5">
             <div class="col-lg-6 mb-4 mb-lg-0">
-                <h2 class="team-title mb-3" style="color: #212121;">Dive In</h2>
+                <h2 class="team-title mb-3" style="color: #212121;">Turn It Up!</h2>
                 <p class="lead text-muted">
-                    In <strong>REEFSCAPE</strong>, two alliances of three teams each compete to restore their "Reef," manage "Algae" populations, and secure their robots on the "Barge."
+                    In <strong>CRESCENDO</strong>, two alliances compete to score Notes, amplify their Speaker, harmonize onstage, and take the spotlight before time runs out.
                 </p>
                 <p class="text-muted">
-                    The game emphasizes precision scoring, vertical integration, and cooperative gameplay mechanics to conserve the coral reef ecosystem.
+                    Robots collect orange foam rings called Notes from their Source and score them into the Amp and Speaker. In the endgame, robots climb chains on the Stage to harmonize.
                 </p>
             </div>
 
             <div class="col-lg-6">
                 <div class="video-wrapper">
                     <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/YWbxcjlY9JY" title="2025 FIRST Robotics Competition REEFSCAPE Game Animation" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/9keeDyFxzY4" title="2024 FIRST Robotics Competition CRESCENDO Game Animation" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="text-center mt-2">
-                    <small class="text-muted fst-italic">Official FIRST Robotics Competition 2025 Game Animation</small>
+                    <small class="text-muted fst-italic">Official FIRST Robotics Competition 2024 Game Animation</small>
                 </div>
             </div>
         </div>
@@ -186,16 +181,16 @@
             </div>
             <div class="col-md-6">
                 <div class="game-piece-card">
-                    <i class="fas fa-ring game-piece-icon"></i>
-                    <h4 class="viking-font text-dark">Coral</h4>
-                    <p>White, 12-inch PVC torus shapes representing coral branches. These are the primary scoring objects placed onto the Reef to restore the ecosystem.</p>
+                    <i class="fas fa-ring game-piece-icon" style="color: #FF5722;"></i>
+                    <h4 class="viking-font text-dark">The Note</h4>
+                    <p>Orange foam rings (14" OD). These are the primary game pieces. Robots pick them up from the floor or the Source and shoot them into the Speaker or Amp.</p>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="game-piece-card">
-                    <i class="fas fa-basketball-ball game-piece-icon" style="color: #28a745;"></i>
-                    <h4 class="viking-font text-dark">Algae</h4>
-                    <p>Green, 16-inch rubber balls representing invasive algae. Robots must remove these from the Reef to clear scoring branches and can score them into the Net or Processor.</p>
+                    <i class="fas fa-bullseye game-piece-icon" style="color: #d81b60;"></i>
+                    <h4 class="viking-font text-dark">High Note</h4>
+                    <p>A special Note used only by Human Players during the endgame. Landing a High Note on a Microphone atop the Stage "Spotlights" robots for bonus points.</p>
                 </div>
             </div>
         </div>
@@ -204,28 +199,30 @@
             <div class="col-lg-6 mb-4 mb-lg-0 d-flex flex-column justify-content-between">
 
                 <div class="mb-4">
-                    <h2 class="team-title text-center" style="color: var(--primary-red);">The Reef</h2>
+                    <h2 class="team-title text-center" style="color: var(--primary-red);">The Studio</h2>
 
-                    <p>The central hub of the alliance's scoring area is the hexagonal Reef. Robots must place Coral onto branches located at various heights and angles. Higher levels yield more points.</p>
+                    <p>The field is set up like a music studio. The primary objective is to score Notes into the <strong>Speaker</strong> (high goal) and the <strong>Amp</strong> (low goal).</p>
                     <div class="alert alert-dark border-gold py-2">
-                        <i class="fas fa-info-circle text-warning me-2"></i>
-                        <strong>Ranking Point:</strong> Filling specific rows across these levels earns the Coral Ranking Point.
+                        <i class="fas fa-bolt text-warning me-2"></i>
+                        <strong>Amplification:</strong> Scoring 2 Notes in the Amp allows the Human Player to AMPLIFY the Speaker, boosting points for 10 seconds.
                     </div>
                 </div>
 
                 <hr class="my-4" style="border-top: 2px solid var(--ragnarok-gold); opacity: 0.5;">
 
                 <div>
-                    <h2 class="team-title text-center" style="color: var(--primary-red);">Endgame: The Barge</h2>
+                    <h2 class="team-title text-center" style="color: var(--primary-red);">Endgame: The Stage</h2>
 
-                    <p>In the final 20 seconds, alliances race to the <strong>Barge</strong> to hang their robots.</p>
+                    <p>In the final 20 seconds, robots race to the <strong>Stage</strong> to hang from chains.</p>
                     <ul class="mb-3">
-                        <li><strong>Shallow Cage:</strong> Higher up, easier reach, fewer points.</li>
-                        <li><strong>Deep Cage:</strong> Hangs lower, harder climb, max points (12 pts).</li>
+                        <li><strong>Park:</strong> Just enter the Stage zone (1 pt).</li>
+                        <li><strong>Onstage:</strong> Hang safely from the chain (3 pts).</li>
+                        <li><strong>Harmony:</strong> Two robots on the same chain (2 pts bonus).</li>
+                        <li><strong>Trap:</strong> Score a Note into the Trap door on the Stage (5 pts).</li>
                     </ul>
 
                     <div class="d-flex flex-wrap gap-2">
-                        <a href="https://www.firstinspires.org/resource-library/frc/competition-manual-qa-system" target="_blank" class="btn btn-norse btn-sm">Read Full Game Manual</a>
+                        <a href="https://firstfrc.blob.core.windows.net/frc2024/Manual/2024GameManual.pdf" target="_blank" class="btn btn-norse btn-sm">Read Full Game Manual</a>
 
                         <a href="https://www.youtube.com/@FIRSTRoboticsCompetition/videos" target="_blank" class="btn btn-outline-dark btn-sm btn-youtube d-inline-flex align-items-center">
                             <i class="fab fa-youtube me-2" style="color: #FF0000; font-size: 1.2rem;"></i>
@@ -237,37 +234,46 @@
 
             <div class="col-lg-6">
                 <div class="sticky-lg-top" style="top: 100px; z-index: 1;">
-                    <h2 class="team-title text-center" style="color: var(--primary-red);">Scoring Hierarchy</h2>
-                    <div class="reef-level">
+                    <h2 class="team-title text-center" style="color: var(--primary-red);">Scoring Breakdown</h2>
+
+                    <div class="score-level">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h4>Level 4 (L4)</h4>
-                            <span class="badge bg-warning text-dark">Highest Difficulty</span>
+                            <h4>The Trap</h4>
+                            <span class="badge bg-warning text-dark">5 Points</span>
                         </div>
-                        <span>Vertical branches approx. 6ft (1.8m) high.</span>
+                        <span>Scoring a Note into the Trap door while hanging.</span>
                     </div>
 
-                    <div class="reef-level">
+                    <div class="score-level">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h4>Level 3 (L3)</h4>
-                            <span class="badge bg-secondary">Medium Difficulty</span>
+                            <h4>Speaker (Amplified)</h4>
+                            <span class="badge bg-danger">5 Points</span>
                         </div>
-                        <span>Mid-height branches angled upward.</span>
+                        <span>Scoring in the high goal while Amp is active.</span>
                     </div>
 
-                    <div class="reef-level">
+                    <div class="score-level">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h4>Level 2 (L2)</h4>
-                            <span class="badge bg-secondary">Medium Difficulty</span>
+                            <h4>Speaker (Normal)</h4>
+                            <span class="badge bg-secondary">2 Points</span>
                         </div>
-                        <span>Low branches angled upward (approx. 35°).</span>
+                        <span>Scoring in the high goal (Teleop).</span>
                     </div>
 
-                    <div class="reef-level">
+                    <div class="score-level">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h4>Level 1 (L1)</h4>
-                            <span class="badge bg-dark">Trough</span>
+                            <h4>The Amp</h4>
+                            <span class="badge bg-dark">1 Point</span>
                         </div>
-                        <span>The base of the Reef. Easiest to score, lowest point value.</span>
+                        <span>Scoring in the low goal. Used to charge amplification.</span>
+                    </div>
+
+                    <div class="score-level">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h4>Onstage (Climb)</h4>
+                            <span class="badge bg-success">3 Points</span>
+                        </div>
+                        <span>Hanging from the chain at end of match.</span>
                     </div>
                 </div>
             </div>
